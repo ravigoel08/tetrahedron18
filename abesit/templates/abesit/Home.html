@@ -1,0 +1,408 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head><title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Home/Home.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/Homes.css'%}">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'animate.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+
+.line{
+   text-align: center;
+    margin-top: 200px;
+    color: black;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+    @media (min-width: 640px){
+        .parallax-container:nth-child(2){
+            display: none;
+        }
+
+
+    }
+    @media (max-width: 641px) {
+        .parallax-container:nth-child(1) {
+            display: none;
+
+
+        }
+
+    }
+.waves-effect{
+                 font-family: 'Bangers', cursive;
+                font-size: 30px;
+
+
+}
+.header2{
+     font-family: 'Bangers', cursive;
+                font-size: 30px;
+    text-align: center;
+}
+.flipInX{
+    text-align: center;
+}
+.rules{
+    font-size: 25px;
+    color: black;
+
+}
+    .Event{
+        height: 300px
+    }
+    .flipInX{
+        animation-iteration-count: 3;
+    }
+    .bounce{
+        animation-delay: 10s;
+        animation-iteration-count: 5;
+    }
+    .contact{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+ <div class="parallax-container" style="height: 600px">
+      <div class="parallax" style="height: 600px">
+     <img src="{% static 'images/arted.png'%}">
+      </div>
+
+      <nav class="transparent">
+        <div class="nav-wrapper">
+        <a href="#" data-target="mobile-demo"></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Event">Events</a></li>
+            <li><a href="#Contact">Contact us</a></li>
+        </ul>
+        </div>
+          <h1 class="animated tada infinite hide-on-med-and-down line ">TETRAHEDRON'18</h1>
+    </nav>
+
+     <a class=" animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-down" href="{% url 'index' %}" style="margin-top: 35% ;margin-left:45%">Register Now!</a>
+
+   </div>
+ <div class="parallax-container">
+
+     <div class="parallax" style="height: 500px">
+     <img src="{% static 'images/arts.png'%}">
+       </div>
+      <nav class="transparent">
+        <div class="nav-wrapper">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#"  target="_blank">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#"  target="_blank">Contact us</a></li>
+        </ul>
+        </div>
+    </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+      <li><a href="#About" target="_blank">About</a></li>
+      <li><a href="#Event"  target="_blank">Events</a></li>
+      <li><a href="#Contact"  target="_blank">Contact us</a></li>
+  </ul>
+
+     <a class="animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-up " style="margin-top: 100% ;margin-left:30%">Register Now!</a>
+   </div>
+ <div class="section" style="background-color: #673AB7">
+      <div class="row container">
+        <h2 class="animated flipInX slower  header" id="About" style="color: white">ABOUT</h2>
+      </div>
+     <div class="row">
+     <div class="col offset-l2 l8">
+        <p style="font-size: 24px ; text-align: justify;color: white">The Tetrahedron is a platform made by the department of Computer Science & Engineering / Information Technology in Collaboration with Computer Society Of India(CSI), in order to explore and showcase the talent of all the students. It's just to bring out smart and creative students at one place, where they are able to gain knowledge and at the same time they can compete with others.</p>
+      </div>
+     </div>
+ </div>
+
+<div class="section " style="background-color: #9575CD">
+    <h2 class="animated bounce  header" id="Event" style="color: white">Events</h2>
+     <div class="row">
+        <div class="col s12  offset-l1 l2">
+      <div class="card Event">
+          <div class="card-image waves-effect waves-block waves-light">
+
+          <img class="activator" src="{% static 'images/images.jpeg' %}">
+
+
+        </div>
+        <div class="card-content">
+
+          <span class="card-title activator grey-text text-darken-4">Coding<i class="material-icons right">more_vert</i></span>
+
+        </div>
+          <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p>This event include solving competiting problem based on C,C++,Java (You can use any of languages mentioned here) </p>
+    </div>
+      </div>
+    </div>
+
+         <div class="col s12 l2">
+      <div class="card Event">
+          <div class="card-image waves-effect waves-block waves-light">
+
+          <img class="activator" src="{% static 'images/es.jpg' %}">
+
+
+        </div>
+        <div class="card-content">
+
+          <span class="card-title activator grey-text text-darken-4">Quiz<i class="material-icons right">more_vert</i></span>
+
+        </div>
+          <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p>This include 2 events : (C,C++,Java),(Python),(DBMS,OS)</p>
+    </div>
+      </div>
+    </div>
+         <div class="col s12 l2">
+      <div class="card Event">
+          <div class="card-image waves-effect waves-block waves-light">
+
+          <img class="activator" src="{% static 'images/group.jpg' %}">
+
+
+        </div>
+        <div class="card-content">
+
+          <span class="card-title activator grey-text text-darken-4">Group Discussion<i class="material-icons right">more_vert</i></span>
+
+        </div>
+          <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p>The Topic will be given on the spot. So be prepared!</p>
+    </div>
+      </div>
+    </div>
+
+
+         <div class="col s12 l2">
+      <div class="card Event">
+          <div class="card-image waves-effect waves-block waves-light">
+
+          <img class="activator" src="{% static 'images/android.jpg' %}">
+
+
+        </div>
+        <div class="card-content">
+
+          <span class="card-title activator grey-text text-darken-4">Layout Designing<i class="material-icons right">more_vert</i></span>
+
+        </div>
+          <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p>This include 2 events : web designing and Android Layout designing</p>
+    </div>
+      </div>
+    </div>
+          <div class="col s12 l2">
+      <div class="card Event">
+          <div class="card-image waves-effect waves-block waves-light">
+
+          <img class="activator" src="{% static 'images/nfs.jpg' %}">
+
+
+        </div>
+        <div class="card-content">
+
+          <span class="card-title activator grey-text text-darken-4">Gaming<i class="material-icons right">more_vert</i></span>
+
+        </div>
+          <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p>This Events include games like Pubg(solo) , Need For speed and Counter Strike 1.6</p>
+    </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background-color: #1E88E5">
+    <div class="row container">
+        <h4 class="header" style="color: white">Rules And Regulations</h4>
+    </div>
+
+    <div class="row">
+        <div class="col l1">
+            <a href="https://drive.google.com/open?id=19BPupJsVvyKDkF2-N2Di46pSwgiVFTcm" class="rules"
+">Gaming</a>
+        </div>
+        <div class="col l1">
+            <a href="https://drive.google.com/open?id=1sl24rw04nDAvT_2cpKnHNtzPeCTnx8mW" class="rules">Quiz</a>
+        </div>
+        <div class="col l1">
+            <a href="https://drive.google.com/open?id=12o3Q6s8Ex66MqU4thYradjz2q0WE_8Mu" class="rules">Coding</a>
+        </div>
+        <div class="col l2">
+            <a href="https://drive.google.com/open?id=1EaNnfjoCR_QO8MxluzjsrJ2Mng_1vTPL" class="rules"><pre>Group Discussion</pre></a>
+        </div>
+        <div class="col offset-l1 l2">
+            <a href="https://drive.google.com/open?id=11QeqCyf8EjRfnbuGMQnpwfoguk_WYPje" class="rules"><pre>Web Design</pre></a>
+        </div>
+        <div class="col l2">
+            <a href="https://drive.google.com/open?id=1TpSh39Y3sTY-UN_yxtXUxSBVlP7AYQi6" class="rules"><pre>Android Layout Design</pre></a>
+        </div>
+
+
+    </div>
+    <div class="row container">
+        <p class="animated flipInX infinite">Click above link to Download!</p>
+    </div>
+        </div>
+<div class="section" style="background-color: #2196F3">
+    <div class="row">
+            <h4 class="header" style="color: white">Faculty Coordinators</h4>
+            <div class="col offset-l2 l3">
+                <div class="card" style="background-color: #FFB74D
+">
+                    <div class="card-content">
+                        <h5 class="header2">Prof. Sumit Kumar</h5>
+                        <p class="contact header2">9891502406</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col offset-l1 l4">
+                <div class="card" style="background-color: #FFB74D">
+                    <div class="card-content">
+                        <h5 class="header2">Prof. Avinash Sharma</h5>
+                        <p class="header2 contact">9999495546</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="section" style="background-color: #42A5F5">
+     <div class="row">
+         <h4 class="header" style="color: white">Faculty Orgranizing Committee</h4>
+         <div class="col l4">
+            <div class="card" style="background-color: #FFB74D">
+            <div class="card-content">
+             <h4 class="header2">Prof. Ankita Dixit</h4>
+            </div>
+     </div>
+ </div>
+         <div class="col l3">
+            <div class="card" style="background-color: #FFB74D">
+            <div class="card-content">
+             <h4 class="header2">Prof. Dhanshri</h4>
+            </div>
+     </div>
+ </div>
+         <div class="col l4">
+            <div class="card" style="background-color: #FFB74D">
+            <div class="card-content">
+             <h4 class="header2">Prof. Aishwariya Gupta</h4>
+
+            </div>
+     </div>
+ </div>
+     </div>
+ </div>
+
+        <div class="wrapper">
+  <h1 class="header">Contact Us</h1>
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url('/static/images/mitul.jpg')">
+						<div class="inner">
+							<p>Mitul</p>
+              <span></span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>9654706347</p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url('/static/images/rish.jpeg')">
+						<div class="inner">
+							<p>Rishab</p>
+              <span></span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>8439388167</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url('/static/images/ravi.jpg')">
+						<div class="inner">
+							<p>Ravi</p>
+              <span></span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>9643349193</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>
+<div class="section black">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">ABES Institute of Technology </h5>
+          <h5 class="white-text">Tetrahedron © 2018</h5>
+        <p class="white-text text-lighten-4">
+         19th Km. Stone, NH-24, Vijay Nagar, Ghaziabad, Uttar Pradesh,PinCode: 201009
+            Ph. +91-8448583370, +91-8448583371
+        </p>
+      </div>
+        <div class="col offset-l2 l3  s12">
+            <a href="#"><img src="{% static 'images/face.png' %}" height="40px" width="40px"> </a>
+            <a href="#"><img src="{% static 'images/insta.png' %}" height="40px" width="40px"> </a>
+            <a href="#"><img src="{% static 'images/twit.png' %}" height="40px" width="40px"> </a>
+        </div>
+    </div>
+    <div class="row">
+        <h6 style="color: white;text-align: right">Made By Ravi Goyal(3rd year)</h6>
+         <h6 style="color: white;text-align: right">Contact No. 9643349193</h6>
+    </div>
+</div>
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.sidenav').sidenav();
+        });
+    </script>
+ <script type="text/javascript"src="{% static 'materialize/js/materialize.min.js' %}"></script>
+</body>
+</html>

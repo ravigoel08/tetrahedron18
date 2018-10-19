@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+body
+{
+    font-family: 'Shadows Into Light Two', cursive;
+}
+h6 {
+    text-align: center;
+}
+.card{
+    margin-top: 10%;
+    height: 100%;
+    width:100%;
+}
+p{
+    font-family: 'Bangers', cursive;
+
+}
+
+body,html {
+    background-color:#FFCA28 ;
+}
+
+a {
+    margin-left: 40%;
+}

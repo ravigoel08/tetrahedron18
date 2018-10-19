@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+/*#logo-image { content:url('arts.png'); }
+        @media screen and (max-width: 640px) {
+            #my-image { content:url("art.png"); }
+            img { border: solid 4px #000; }  /
+        }
+*/
+
+
+.About{
+    font-family: 'Niramit', sans-serif;
+
+}
+.header{
+    font-size: 60px;
+    text-align: center;
+     font-family: 'Bangers', cursive;
+}
+.grey-text{
+        font-family: 'Shadows Into Light Two', cursive;
+    font-size: 30px;
+
+}
+@media (max-width: 768px) {
+    .grey-text{
+        font-size: 20px;
+    }
+    .header{
+        font-size: 35px;
+    }
+    
+}
+.transparent{
+    background-color: transparent;
+}

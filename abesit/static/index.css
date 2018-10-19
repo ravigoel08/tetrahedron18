@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+body,html {
+    background-color: #FBC02D;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+     position: relative;
+     opacity: 1;
+}
+
+
+label{
+font-family: 'Bangers', cursive;
+    font-size: 20px;
+}

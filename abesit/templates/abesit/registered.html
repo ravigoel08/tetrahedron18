@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<link rel="stylesheet" href="{%  static 'materialize/css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{%  static 'registered.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col offset-s1 s10 offset-l3 l6">
+            <div class="card">
+           <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static 'images/de.png' %}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Registration Key<i class="material-icons right">more_vert</i></span>
+      <p>{% for Code in Codes  %}
+            {{ Code }}
+      {% endfor %}</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Regarding to Registration Key<i class="material-icons right">close</i></span>
+      <p>This key will be used for payment purpose. When you will send amount on the paytm link then you have to put this Key in the registration box so that we can complete your Registration. While writing this key in description box please carefully check if you entered it correct so that you dont have to face any problem regarding to the registration.
+      PEACE!</p>
+
+    </div>
+            <div class="card-action">
+                <a  href="http://m.p-y.tm/tetrahedron_18_nrweb" style="color: black">Paytm Here</a>
+            </div>
+
+        </div>
+        <a class="waves-effect waves-light btn " href="{% url 'Home' %}">Home</a>
+
+    </div>
+    </div>
+    </div>
+<script src="{% static 'materialize/js/materialize.min.js' %}"></script>
+</body>
+
+</html>
