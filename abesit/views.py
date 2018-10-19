@@ -35,7 +35,7 @@ def index(request):
 
             new_register = Register(Name=request.POST['Name'],Code=Codes,Contact_No=request.POST['Contact_No'],Email=request.POST['Email'],College_Code=request.POST['College_Code'],Quiz=request.POST['Quiz'],Gaming=request.POST['Gaming'],Coding=request.POST['Coding'],Androiddevelopment=request.POST['Androiddevelopment'],Groupdiscussion=request.POST['Groupdiscussion'],Webdesigning=request.POST['Webdesigning'])
             new_register.save()
-            return redirect('/tetrahedron/registered/?Codes='+Codes)
+            return redirect('/registered/?Codes='+Codes)
 
     else:
         form = RegisterForm()
