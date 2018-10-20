@@ -31,6 +31,9 @@ img {
         .parallax-container:nth-child(2){
             display: none;
         }
+        .btn{
+            margin-top: 25%;
+        }
 
 
     }
@@ -39,6 +42,9 @@ img {
             display: none;
 
 
+        }
+        .btn{
+            margin-top: 90% ;
         }
 
     }
@@ -78,8 +84,8 @@ img {
 </head>
 <body>
 
- <div class="parallax-container" style="height: 600px">
-      <div class="parallax" style="height: 600px">
+ <div class="parallax-container center" style="height: 600px">
+      <div class="parallax">
      <img src="{% static 'images/arted.png'%}">
       </div>
 
@@ -94,23 +100,19 @@ img {
         </div>
           <h1 class="animated tada infinite hide-on-med-and-down line ">TETRAHEDRON'18</h1>
     </nav>
-
-     <a class=" animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-down" href="{% url 'index' %}" style="margin-top: 35% ;margin-left:45%">Register Now!</a>
-
+<div style="text-align: center">
+     <a class=" animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-down" href="{% url 'index' %}" >Register Now!</a>
+</div>
    </div>
- <div class="parallax-container">
+ <div class="parallax-container center"  style="height: 500px">
 
-     <div class="parallax" style="height: 500px">
-     <img src="{% static 'images/arts.png'%}">
+     <div class="parallax">
+     <img src="{% static 'images/arts.png'%}" >
        </div>
       <nav class="transparent">
         <div class="nav-wrapper">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#"  target="_blank">About</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#"  target="_blank">Contact us</a></li>
-        </ul>
+
         </div>
     </nav>
 
@@ -119,9 +121,10 @@ img {
       <li><a href="#Event"  target="_blank">Events</a></li>
       <li><a href="#Contact"  target="_blank">Contact us</a></li>
   </ul>
-
-     <a class="animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-up " href="{% url 'index' %}" style="margin-top: 100% ;margin-left:30%">Register Now!</a>
+    <div style="text-align: center">
+     <a class="animated rubberBand infinite waves-effect waves-light btn red hide-on-med-and-up " href="{% url 'index' %}" ">Register Now!</a>
    </div>
+     </div>
  <div class="section" style="background-color: #673AB7">
       <div class="row container">
         <h2 class="animated flipInX slower  header" id="About" style="color: white">ABOUT</h2>
