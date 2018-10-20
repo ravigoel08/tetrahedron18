@@ -38,8 +38,8 @@ DISCUSSION_CHOICES = [
 class RegisterForm(forms.Form):
     Name = forms.CharField(max_length=20)
     Email= forms.EmailField(max_length=70)
-    Contact_No = forms.CharField(max_length=10)
-    CSI = forms.CharField(required=False,max_length=8)
+    Contact_No = forms.CharField(max_length=11)
+    CSI = forms.CharField(required=False,max_length=10)
     College_Code = forms.CharField(max_length=3)
     Quiz = forms.ChoiceField(required=False,choices=QUIZ_CHOICES,widget=forms.RadioSelect())
     Gaming = forms.ChoiceField(required=False,choices=GAMING_CHOICES,widget=forms.RadioSelect())
