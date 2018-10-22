@@ -4,7 +4,8 @@ from django import forms
 
 
 QUIZ_CHOICES =[
-    ('C/C++/Java','C/C++/Java'),
+    ('C/C++','C/C++'),
+    ('JAVA','JAVA'),
     ('python','PYTHON'),
     ('dbms/os','DBMS/OS'),
     ('None','NONE')
