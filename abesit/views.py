@@ -31,11 +31,14 @@ def index(request):
     if request.method =="POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            Codes = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(6)])
 
-            new_register = Register(Name=request.POST['Name'],Code=Codes,Contact_No=request.POST['Contact_No'],Email=request.POST['Email'],College_Code=request.POST['College_Code'],Quiz=request.POST['Quiz'],Gaming=request.POST['Gaming'],Coding=request.POST['Coding'],Androiddevelopment=request.POST['Androiddevelopment'],Groupdiscussion=request.POST['Groupdiscussion'],Webdesigning=request.POST['Webdesigning'])
+            new_register = Register(Name=request.POST['Name'],Roll_No=request.POST['Roll_No'],Year=request.POST['Year'],Contact_No=request.POST['Contact_No'],Email=request.POST['Email'],College_Code=request.POST['College_Code'],Quiz=request.POST['Quiz'],Gaming=request.POST['Gaming'],Coding=request.POST['Coding'],Androiddevelopment=request.POST['Androiddevelopment'],Groupdiscussion=request.POST['Groupdiscussion'],Webdesigning=request.POST['Webdesigning'])
             new_register.save()
-            return redirect('/registered/?Codes='+Codes)
+            data = Register.objects.filter(Roll_No=request.POST['Roll_No']).values('Roll_No')
+            rol = {
+                "rollnumber" : data
+            }
+            return render_to_response('abesit/registered.html',rol)
 
     else:
         form = RegisterForm()

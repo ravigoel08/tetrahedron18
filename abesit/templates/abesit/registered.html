@@ -17,8 +17,8 @@
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Registration Key<i class="material-icons right">more_vert</i></span>
-      <p>{% for Code in Codes  %}
-            {{ Code }}
+      <p>{% for Roll_No in rollnumber %}
+            {{ Roll_No.Roll_No }}
       {% endfor %}</p>
     </div>
     <div class="card-reveal">

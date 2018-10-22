@@ -10,6 +10,13 @@ QUIZ_CHOICES =[
     ('dbms/os','DBMS/OS'),
     ('None','NONE')
 ]
+YEAR_CHOICES = [
+('1','1'),
+('2','2'),
+('3','3'),
+('4','4'),
+
+]
 GAMING_CHOICES = [
     ('NFS','NFS'),
 ('Counterstrike','COUNTERSTRIKE'),
@@ -39,9 +46,11 @@ DISCUSSION_CHOICES = [
 class RegisterForm(forms.Form):
     Name = forms.CharField(max_length=20)
     Email= forms.EmailField(max_length=70)
+    Roll_No = forms.CharField(max_length=12)
     Contact_No = forms.CharField(max_length=11)
     CSI = forms.CharField(required=False,max_length=10)
     College_Code = forms.CharField(max_length=3)
+    Year = forms.ChoiceField(choices = YEAR_CHOICES,widget = forms.RadioSelect())
     Quiz = forms.ChoiceField(required=False,choices=QUIZ_CHOICES,widget=forms.RadioSelect())
     Gaming = forms.ChoiceField(required=False,choices=GAMING_CHOICES,widget=forms.RadioSelect())
     Coding = forms.ChoiceField(required=False,choices=CODING_CHOICES,widget=forms.RadioSelect())
