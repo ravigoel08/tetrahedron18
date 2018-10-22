@@ -18,4 +18,4 @@ class Register(models.Model):
     Groupdiscussion = models.CharField(max_length=20)
 
     def __str__(self):
-        return 'Name:{},Code:{}'.format(self.Name,self.Roll_No)
+        return 'id:{},Name:{},Code:{}'.format(self.id,self.Name,self.Roll_No)
