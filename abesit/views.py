@@ -46,3 +46,13 @@ def index(request):
     context = {'form':form}
     return render(request,'abesit/index.html',context)
 
+
+from django.http import HttpResponse
+from .resources import RegisterResource
+
+def export(request):
+    register_resource = RegisterResource()
+    dataset = register_resource.export()
+    response = HttpResponse(dataset.csv, content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="registeration.csv"'
+    return response
