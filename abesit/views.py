@@ -32,7 +32,7 @@ def index(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
 
-            new_register = Register(Name=request.POST['Name'],Roll_No=request.POST['Roll_No'],Year=request.POST['Year'],Contact_No=request.POST['Contact_No'],Email=request.POST['Email'],College_Code=request.POST['College_Code'],Quiz=request.POST['Quiz'],Gaming=request.POST['Gaming'],Coding=request.POST['Coding'],Androiddevelopment=request.POST['Androiddevelopment'],Groupdiscussion=request.POST['Groupdiscussion'],Webdesigning=request.POST['Webdesigning'])
+            new_register = Register(Name=request.POST['Name'],Roll_No=request.POST['Roll_No'],CSI=request.POST['CSI'],Year=request.POST['Year'],Contact_No=request.POST['Contact_No'],Email=request.POST['Email'],College_Code=request.POST['College_Code'],Quiz=request.POST['Quiz'],Gaming=request.POST['Gaming'],Coding=request.POST['Coding'],Androiddevelopment=request.POST['Androiddevelopment'],Groupdiscussion=request.POST['Groupdiscussion'],Webdesigning=request.POST['Webdesigning'])
             new_register.save()
             data = Register.objects.filter(Roll_No=request.POST['Roll_No']).values('Roll_No')
             rol = {

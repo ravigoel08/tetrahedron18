@@ -8,7 +8,7 @@ class Register(models.Model):
     Year =models.CharField(default=0,max_length=2)
     Email = models.EmailField(max_length=70)
     Contact_No = models.TextField(max_length=12)
-    CSI = models.TextField(default=0,max_length=10)
+    CSI = models.CharField(default=0,max_length=10)
     College_Code = models.PositiveIntegerField(validators=[MaxValueValidator(999)])
     Quiz = models.CharField(max_length=20)
     Gaming = models.CharField(max_length=20)
