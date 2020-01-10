@@ -15,7 +15,7 @@
 
 ## Screenshots 
 
-![Image1](Screenshot from 2020-01-10 17-42-37.png)
+![Image1](p.png)
 
 ## Link :+1:
 
